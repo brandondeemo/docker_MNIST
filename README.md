@@ -77,6 +77,8 @@ USE mnist_key;
 select*from record_data;
 ```
 
+# Acknowledgement
 
+Thanks a lot for supervisor Dr.Zhang Fan’s great leadership and patience. 
 
 
