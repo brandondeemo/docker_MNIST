@@ -51,7 +51,7 @@ def convert_img(img_data):
         output.write(base64.b64decode(re.search(b'base64,(.*)', img_data).group(1)))
 
 
-@mnist_web.route('/predict/', methods=['GET', 'POST'])
+@mnist_web.route('/predict/', methods=['POST'])
 def predict():
     """
     whenever this function is called, we're going to convert the image we draw
