@@ -41,6 +41,16 @@ def index():
     return render_template("index.html")
 
 
+def convert_img(img_data):
+    """
+    decoding the image from base64 into raw representation
+    :param img_data_path:
+    :return: None
+    """
+    with open('digit.png', 'wb') as output:
+        output.write(base64.b64decode(re.search(b'base64,(.*)', img_data).group(1)))
+
+
 
 @mnist_web.route('/predict/', methods=['POST'])
 def predict():
